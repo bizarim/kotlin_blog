@@ -1,4 +1,4 @@
-From openjdk:17-jdk-alpine As builder
+FROM openjdk:17-jdk-alpine As builder
 
 ARG TAG_VERSION
 
@@ -8,7 +8,7 @@ COPY build.gradle.kts .
 COPY settings.gradle.kts .
 COPY src src
 
-RUN echo "$TAG_VERSION: $TAG_VERSION"
+RUN echo "TAG_VERSION: $TAG_VERSION"
 RUN ./gradlew -P version=TAG_VERSION clean build
 
 
