@@ -1,0 +1,13 @@
+From openjdk:17-jdk-alpine As builder
+COPY gradlew .
+COPY gradle gradle
+COPY build.gradle.kts .
+COPY settings.gradle.kts .
+COPY src src
+RUN ./gradlew clean build
+
+
+FROM openjdk:17-jdk-alpine
+COPY --from=builder build/libs/*.jar app.jar
+
+ENTRYPOINT ["java","-jar","/app.jar"]
