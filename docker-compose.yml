@@ -5,6 +5,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.webapi_blog
+      args:
+        - TAG_VERSION=1.0.1
+    image: webapi/blog:1.0.1
     ports:
       - 8080:8080
     restart: always
