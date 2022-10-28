@@ -9,4 +9,5 @@
 5. 멀티 프로젝트
 6. api 
    1. https://ellune.tistory.com/69 
-
+7. lint
+   1. https://velog.io/@eastperson/Kotlin-Spring-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B02-Kotlin-Lint

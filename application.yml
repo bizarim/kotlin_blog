@@ -1,0 +1,19 @@
+# https://frogand.tistory.com/132
+spring:
+  datasource:
+    hikari:
+      main:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://localhost:3306/temp_main?serverTimezone=UTC&characterEncoding=UTF-8
+        username: root
+        password: 1234
+      user:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://localhost:3306/temp_user?serverTimezone=UTC&characterEncoding=UTF-8
+        username: root
+        password: 1234
+  jpa:
+    hibernate:
+      ddl-auto: update
+    generate-ddl: true
+    show-sql: true
